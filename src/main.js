@@ -1,4 +1,21 @@
 import "./style.css";
-console.log("====================================");
-console.log("script");
-console.log("====================================");
+import { World } from "./world.js";
+import { Hero } from "./hero.js";
+
+export const TILE_SIZE = 32;
+export const COLS = 15;
+export const ROWS = 20;
+export const GAME_WIDTH = TILE_SIZE * COLS;
+export const GAME_HEIGHT = TILE_SIZE * ROWS;
+let canvas = document.getElementById("canvas1");
+let ctx = canvas.getContext("2d");
+
+canvas.width = GAME_WIDTH;
+canvas.height = GAME_HEIGHT;
+
+let world = new World();
+world.drawGrid(ctx);
+
+const h = new Hero();
+h.draw(ctx);
+console.log(h);
