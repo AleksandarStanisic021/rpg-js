@@ -1,6 +1,7 @@
 import "./style.css";
 import { World } from "./world.js";
 import { Hero } from "./hero.js";
+import { Input } from "./input.js";
 
 export const TILE_SIZE = 32;
 export const COLS = 15;
@@ -15,6 +16,9 @@ canvas.height = GAME_HEIGHT;
 
 let world = new World();
 world.drawGrid(ctx);
+
+let input = new Input();
+console.log(input.keys);
 
 const h = new Hero({
   position: { x: 3, y: 7 },
