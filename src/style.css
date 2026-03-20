@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e1e;
+}
+
+#canvas {
+  background-color: #52f0eb;
+  border: 3px solid black;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+}
