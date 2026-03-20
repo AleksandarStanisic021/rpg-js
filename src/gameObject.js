@@ -10,10 +10,15 @@ export class GameObject {
       height: TILE_SIZE,
       image: "",
     };
-    this.position = position ?? { x: 0, y: 0 };
+    this.position = position ?? { position: { x: 0, y: 0 } };
     this.scale = scale ?? 1;
   }
   draw(ctx) {
-    ctx.fillRect(this.position.x, this.position.y, TILE_SIZE, TILE_SIZE);
+    ctx.fillRect(
+      this.position.x * TILE_SIZE,
+      this.position.y * TILE_SIZE,
+      TILE_SIZE,
+      TILE_SIZE,
+    );
   }
 }

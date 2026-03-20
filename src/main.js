@@ -16,6 +16,7 @@ canvas.height = GAME_HEIGHT;
 let world = new World();
 world.drawGrid(ctx);
 
-const h = new Hero({});
+const h = new Hero({
+  position: { x: 3, y: 7 },
+});
 h.draw(ctx);
-console.log(h);
